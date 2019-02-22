@@ -1,17 +1,26 @@
 import React, { Component } from 'react'
+import ingredientJSON from './ingredientJSON'
 
-export class ingredientList extends Component {
+export class IngredientList extends Component {
   render() {
 
-    
+    const ingredient = ingredientJSON;
+
+    const ingredients = ingredient.map(i => {
+      
+      return <li style={style} key={i.id}>{i.name}</li>
+    });
     return (
-      <ul>
-          
+      
+      <ul style={style}>
+         {ingredients} 
+      </ul>
 
         
-      </ul>
     )
   }
 }
-
-export default ingredientList
+const style = {
+  border:'solid 1px blue'
+};
+export default IngredientList

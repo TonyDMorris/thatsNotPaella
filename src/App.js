@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
-
 import './App.css';
+import IngredientList from './components/ingredientList'
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div style={style} className="App">
         <header className="App-header">
          </header>
 
-         <body>
-<h1>hello world</h1>
+         
+<IngredientList/>
 
-         </body>
+         
       </div>
     );
   }
 }
-
+const style = {
+  display:'grid',
+  gridTemplateColumns:'70vw 30vw'
+}
 export default App;
