@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import IngredientList from './components/IngredientList'
-
+import Paellero from './components/Paellero'
 
 class App extends Component {
   render() {
@@ -12,6 +12,7 @@ class App extends Component {
 
          
 <IngredientList/>
+<Paellero/>
 
          
       </div>

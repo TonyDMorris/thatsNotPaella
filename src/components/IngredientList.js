@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import ingredientJSON from './IngredientJSON'
+import IngredientJSON from './IngredientJSON'
 
 export class IngredientList extends Component {
   render() {
 
-    const ingredient = ingredientJSON;
+    const ingredient = IngredientJSON;
 
     const ingredients = ingredient.map(i => {
       
