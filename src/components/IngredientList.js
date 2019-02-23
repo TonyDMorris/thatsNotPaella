@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ingredientJSON from './ingredientJSON'
+import ingredientJSON from './IngredientJSON'
 
 export class IngredientList extends Component {
   render() {

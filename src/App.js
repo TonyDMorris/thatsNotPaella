@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import IngredientList from './components/ingredientList'
+import IngredientList from './components/IngredientList'
 
 
 class App extends Component {
