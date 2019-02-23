@@ -21,6 +21,8 @@ export class IngredientList extends Component {
   }
 }
 const style = {
-  border:'solid 1px blue'
+  border:'solid 1px blue',
+  gridRow: '1 / span 1',
+  gridColumn:'2 / span 1'
 };
 export default IngredientList
