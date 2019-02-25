@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import IngredientList from './components/IngredientList'
 import Paellero from './components/Paellero'
+import HTML5Backend from 'react-dnd-html5-backend'
+import { DragDropContext } from 'react-dnd'
 
 class App extends Component {
   render() {
@@ -24,4 +26,4 @@ const style = {
   gridTemplateColumns:'70vw 30vw',
   gridTemplateRows:'70vh 30vh'
 }
-export default App;
+export default DragDropContext(HTML5Backend)(App)
