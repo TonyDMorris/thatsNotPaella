@@ -19,8 +19,14 @@ const spec = {
 
   beginDrag(props, monitor, component) {
     // Return the data describing the dragged item
-    const item = { id: props.id };
-    return item;
+    
+const item = {
+  name:props.name
+}
+return item
+    
+    
+    
   },
 
   endDrag(props, monitor, component) {
