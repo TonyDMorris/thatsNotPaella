@@ -4,6 +4,7 @@ import IngredientList from './components/IngredientList'
 import Paellero from './components/Paellero'
 import HTML5Backend from 'react-dnd-html5-backend'
 import { DragDropContext } from 'react-dnd'
+import Example from './components/Modal'
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
          
 <IngredientList/>
 <Paellero/>
+<Example/>
 
          
       </div>

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { DragSource } from 'react-dnd';
 
-
+let correctIngredients = ['rabbit']
 const types = {
     food:'food'
 }
@@ -30,11 +30,7 @@ return item
   },
 
   endDrag(props, monitor, component) {
-    if (!monitor.didDrop()) {
-      // You can check whether the drop was successful
-      // or if the drag ended but nobody handled the drop
-      return;
-    }
+    
 
     // When dropped on a compatible target, do something.
     // Read the original dragged item from getItem():
@@ -45,7 +41,12 @@ return item
     // its drop() method.
     const dropResult = monitor.getDropResult();
 
-    // This is a good place to call some Flux action
+    if (monitor.didDrop()) {
+      // You can check whether the drop was successful
+      // or if the drag ended but nobody handled the drop
+      let val = monitor.getItem().name == correctIngredients[0]
+      console.log(val)
+    }
   
   }
 };
@@ -67,10 +68,10 @@ function collect(connect, monitor) {
 class Ingredient extends Component {
     render() {
       
-      const { isDragging, connectDragSource, name } = this.props;
+      const { isDragging, connectDragSource, name, id } = this.props;
   
       return connectDragSource(
-        <li style={style}>{name}</li>
+        <li key={id} style={style}>{name}</li>
 
       );
     }
