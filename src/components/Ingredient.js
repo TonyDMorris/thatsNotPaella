@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import { DragSource } from 'react-dnd';
+import Fail from './Fail'
+
 
 let correctIngredients = ['rabbit']
 const types = {
@@ -45,7 +47,8 @@ return item
       // You can check whether the drop was successful
       // or if the drag ended but nobody handled the drop
       let val = monitor.getItem().name == correctIngredients[0]
-      console.log(val)
+      Fail.handleShow()
+      
     }
   
   }

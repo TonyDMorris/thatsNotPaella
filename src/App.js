@@ -6,6 +6,7 @@ import HTML5Backend from 'react-dnd-html5-backend'
 import { DragDropContext } from 'react-dnd'
 import Fail from './components/Fail'
 
+
 class App extends Component {
   render() {
     return (
@@ -22,7 +23,7 @@ class App extends Component {
          
 <IngredientList/>
 <Paellero/>
-<Fail/>
+<Fail id='fail'/>
 
          
       </div>

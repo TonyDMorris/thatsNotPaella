@@ -25,9 +25,7 @@ class Fail extends Component {
   render() {
     return (
       <>
-        <Button variant="primary" onClick={this.handleShow}>
-          Launch demo modal
-        </Button>
+        
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
