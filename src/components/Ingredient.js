@@ -46,8 +46,9 @@ return item
     if (monitor.didDrop()) {
       // You can check whether the drop was successful
       // or if the drag ended but nobody handled the drop
-      let val = monitor.getItem().name == correctIngredients[0]
-      Fail.handleShow()
+      const parent = ReactDOM.render(<Fail show={true}/>, document.getElementById('root'))
+
+      parent.forceUpdate()
       
     }
   
