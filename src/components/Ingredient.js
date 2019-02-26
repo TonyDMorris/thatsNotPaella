@@ -64,11 +64,13 @@ class Ingredient extends Component {
       const { isDragging, connectDragSource, name } = this.props;
   
       return connectDragSource(
-        <li>{name}</li>
+        <li style={style}>{name}</li>
 
       );
     }
   }
-
+const style = {
+  border:'solid 1px blue'
+}
 
 export default DragSource(types.food, spec, collect)(Ingredient);

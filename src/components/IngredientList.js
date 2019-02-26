@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import IngredientJSON from './IngredientJSON'
-import Ingredient from './Ingredient'
+import Ingredient from './Ingredient.js'
 
 
 
