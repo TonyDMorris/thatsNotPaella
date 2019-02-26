@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import { Button } from 'react-bootstrap';
 import { Modal } from 'react-bootstrap';
 
-class Example extends Component {
+class Fail extends Component {
   constructor(props, context) {
     super(props, context);
 
@@ -52,4 +52,4 @@ class Example extends Component {
   
   
 
-  export default Example
+  export default Fail
