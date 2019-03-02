@@ -10,7 +10,7 @@ class Fail extends Component {
     this.handleClose = this.handleClose.bind(this);
 
     this.state = {
-      show: false,
+      show: true,
     };
   }
 
@@ -21,6 +21,9 @@ class Fail extends Component {
   handleShow() {
     this.setState({ show: true });
   }
+
+  handleReset = () => window.location.reload()
+  
 
   render() {
     return (
@@ -33,12 +36,10 @@ class Fail extends Component {
           </Modal.Header>
           <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={this.handleClose}>
+            <Button variant="secondary" onClick={this.handleReset}>
               Close
             </Button>
-            <Button variant="primary" onClick={this.handleClose}>
-              Save Changes
-            </Button>
+           
           </Modal.Footer>
         </Modal>
       </>

@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import ReactDOM from 'react-dom';
 import { DragSource } from 'react-dnd';
 import Fail from './Fail'
 
@@ -46,9 +47,9 @@ return item
     if (monitor.didDrop()) {
       // You can check whether the drop was successful
       // or if the drag ended but nobody handled the drop
-      const parent = ReactDOM.render(<Fail show={true}/>, document.getElementById('root'))
-
-      parent.forceUpdate()
+       const parent = ReactDOM.render(<Fail show="true"/>, document.querySelector("#modal"));
+parent.forceUpdate()
+      
       
     }
   
