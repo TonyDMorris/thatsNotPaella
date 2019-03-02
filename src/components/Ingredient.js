@@ -70,7 +70,7 @@ class Ingredient extends Component {
   
       return connectDragSource(
         <li key={id} style={style}>{name}<svg class="icon">
-        <use href="./My icons collection-SVG-sprite.svg/#tomato" />
+        <use href="src/components/icons#watermelon" />
         </svg></li>
 
       );

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { Button } from 'react-bootstrap';
 import { Modal } from 'react-bootstrap';
-import Ingredient from './Ingredient'
+
 class Fail extends Component {
   constructor(props, context) {
     super(props, context);
