@@ -32,12 +32,12 @@ class Fail extends Component {
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+            <Modal.Title>Thats not Paella</Modal.Title>
           </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+          <Modal.Body>{this.textProp}</Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={this.handleReset}>
-              Close
+            <Button variant="primary" onClick={this.handleReset}>
+              Start again!
             </Button>
            
           </Modal.Footer>

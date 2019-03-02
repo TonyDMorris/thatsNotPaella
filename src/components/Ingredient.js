@@ -12,13 +12,7 @@ const types = {
 const spec = {
   
 
-  isDragging(props, monitor) {
-    // If your component gets unmounted while dragged
-    // (like a card in Kanban board dragged between lists)
-    // you can implement something like this to keep its
-    // appearance dragged:
-    return monitor.getItem().id === props.id;
-  },
+  
 
   beginDrag(props, monitor, component) {
     // Return the data describing the dragged item
@@ -45,8 +39,7 @@ return item
     const dropResult = monitor.getDropResult();
 
     if (monitor.didDrop()) {
-      // You can check whether the drop was successful
-      // or if the drag ended but nobody handled the drop
+      
        const parent = ReactDOM.render(<Fail show="true"/>, document.querySelector("#modal"));
 parent.forceUpdate()
       
@@ -82,7 +75,8 @@ class Ingredient extends Component {
     }
   }
 const style = {
-  border:'solid 1px blue'
+  border:'solid 1px blue',
+  cursor:'move'
 }
 
 export default DragSource(types.food, spec, collect)(Ingredient);

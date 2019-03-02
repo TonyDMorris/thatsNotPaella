@@ -14,10 +14,7 @@ class App extends Component {
         <header className="App-header">
         <link
   rel="stylesheet"
-  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-  
-  
-/>
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
          </header>
 
          
