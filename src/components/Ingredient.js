@@ -69,7 +69,9 @@ class Ingredient extends Component {
       const { isDragging, connectDragSource, name, id } = this.props;
   
       return connectDragSource(
-        <li key={id} style={style}>{name}</li>
+        <li key={id} style={style}>{name}<svg class="icon">
+        <use href="./My icons collection-SVG-sprite.svg/#tomato" />
+        </svg></li>
 
       );
     }
