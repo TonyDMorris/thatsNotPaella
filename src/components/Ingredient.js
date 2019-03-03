@@ -69,7 +69,7 @@ class Ingredient extends Component {
       const { isDragging, connectDragSource, name, id } = this.props;
   
       return connectDragSource(
-        <li key={id} style={style}>{name}</li>
+        <li key={id} style={style}>{name}<img src="src/components/svgs/flatgreenbeans.svg" alt="a pic"></img></li>
 
       );
     }
