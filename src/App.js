@@ -29,7 +29,7 @@ class App extends Component {
 }
 const style = {
   display:'grid',
-  gridTemplateColumns:'70vw 30vw',
+  gridTemplateColumns:'60vw 40vw',
   gridTemplateRows:'70vh 30vh'
 }
 export default DragDropContext(HTML5Backend)(App)

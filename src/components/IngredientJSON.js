@@ -39,4 +39,6 @@ export default [
         name:"White beans",
         path:"whitebeans.svg"
     }
+    
+
 ];

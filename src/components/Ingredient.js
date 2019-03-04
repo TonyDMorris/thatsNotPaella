@@ -87,14 +87,16 @@ class Ingredient extends Component {
   }
 const style = {
   
-  display:'flex',
+  display:'grid',
+  gridTemplateColumns:'repeat(auto-fill, minmax(50%, 1fr))',
   border:'solid 1px blue',
   cursor:'move',
-  height:'100px'
+  
   
 }
 const imgStyle = {
-  maxWidth:'50%'
+  maxWidth:'100%',
+  maxHeight:'100%'
 }
 
 export default DragSource(types.food, spec, collect)(Ingredient);
