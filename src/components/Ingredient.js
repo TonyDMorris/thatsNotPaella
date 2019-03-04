@@ -2,15 +2,14 @@ import React, {Component} from 'react'
 import ReactDOM from 'react-dom';
 import { DragSource } from 'react-dnd';
 import Fail from './Fail';
-import { pathToFileURL } from 'url';
-import { createRequireFromPath } from 'module';
 
 
 
 
 
 
-let correctIngredients = ['rabbit']
+
+let correctIngredients = ['rabbit', 'tomato', 'garlic', 'paprika', 'chicken', 'greenbeans', 'rabbit', 'saffron', 'whitebeans']
 const types = {
     food:'food'
 }
@@ -45,9 +44,15 @@ return item
     const dropResult = monitor.getDropResult();
 
     if (monitor.didDrop()) {
+      console.log(monitor.getItem().name)
       
-       const parent = ReactDOM.render(<Fail show="true"/>, document.querySelector("#modal"));
-parent.forceUpdate()
+      if(correctIngredients.indexOf(`${monitor.getItem().name}`) > -1){
+        
+      }
+//        const parent = ReactDOM.render(<Fail show="true"/>, document.querySelector("#modal"));
+// parent.forceUpdate()
+
+
       
       
     }
