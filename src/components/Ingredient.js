@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import { DragSource } from 'react-dnd';
 import Fail from './Fail';
 
-
+const deleteItem = (id) => {
+  console.log(id)
+}
 
 
 
@@ -23,7 +25,8 @@ const spec = {
     // Return the data describing the dragged item
     
 const item = {
-  name:props.name
+  name:props.name,
+  id:props.id
 }
 return item
     
@@ -44,7 +47,7 @@ return item
     const dropResult = monitor.getDropResult();
 
     if (monitor.didDrop()) {
-      console.log(monitor.getItem().name)
+      console.log(props.handleDrop(props.id))
       
       if(correctIngredients.indexOf(`${monitor.getItem().name}`) > -1){
         
@@ -80,7 +83,7 @@ class Ingredient extends Component {
       const { isDragging, connectDragSource, name, id, path } = this.props;
   
       return connectDragSource(
-        <li key={id} style={style}>{name}<img style={imgStyle} src={require(`/home/tony/Documents/thatsnotpaella/src/components/svgs/${path}`)} alt={name}></img></li>
+        <li handleDrop={(id) => this.deleteItem(id)} key={id} style={style}>{name}<img style={imgStyle} src={require(`/home/tony/Documents/thatsnotpaella/src/components/svgs/${path}`)} alt={name}></img></li>
 
       );
     }

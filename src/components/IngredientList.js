@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import IngredientJSON from './IngredientJSON'
-import Ingredient from './Ingredient.js'
+import Ingredient from './Ingredient.js';
 
 
-
-
+  
 
 
 
@@ -16,11 +15,13 @@ import Ingredient from './Ingredient.js'
 export class IngredientList extends Component {
   render() {
    
-    
+    const deleteItem = (id) => {
+      console.log(id)
+    }
 
     const ingredients = IngredientJSON.map(i => {
       
-      return <Ingredient key={i.id} name={i.name} path={i.path}/>
+      return <Ingredient  key={i.id} name={i.name} path={i.path}/>
     });
     return (
 
