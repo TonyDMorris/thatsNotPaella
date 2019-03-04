@@ -66,18 +66,24 @@ function collect(connect, monitor) {
 class Ingredient extends Component {
     render() {
       
-      const { isDragging, connectDragSource, name, id } = this.props;
+      const { isDragging, connectDragSource, name, id, root } = this.props;
   
       return connectDragSource(
-        <li key={id} style={style}>{name}<img src={require('./svgs/flatgreenbeans.svg')} alt="a pic"></img></li>
+        <li key={id} style={style}>{name}<img style={imgStyle} src={require({root})} alt="a pic"></img></li>
 
       );
     }
   }
 const style = {
+  
+  display:'flex',
   border:'solid 1px blue',
   cursor:'move',
   height:'100px'
+  
+}
+const imgStyle = {
+  maxWidth:'50%'
 }
 
 export default DragSource(types.food, spec, collect)(Ingredient);

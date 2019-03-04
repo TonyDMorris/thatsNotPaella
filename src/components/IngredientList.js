@@ -19,7 +19,7 @@ export class IngredientList extends Component {
 
     const ingredients = IngredientJSON.map(i => {
       
-      return <Ingredient key={i.id} name={i.name}/>
+      return <Ingredient key={i.id} name={i.name} root={i.root}/>
     });
     return (
 
