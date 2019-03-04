@@ -1,42 +1,42 @@
 export default [
     {
         id:0,
-        name:'Tomato',
-        root:'./src/components/svgs/005-tomato.svg'
+        name:"Tomato",
+        path:"005-tomato.svg"
     },
     {
         id:1,
-        name:'Garlic',
-        root:'./src/components/svgs/006-garlic.svg'
+        name:"Garlic",
+        path:"006-garlic.svg"
     },
     {
         id:2,
-        name:'Paprika',
-        root:'./src/components/svgs/007-paprika.svg'
+        name:"Paprika",
+        path:"007-paprika.svg"
     },
     {
         id:3,
-        name:'Chicken',
-        root:'./src/components/svgs/chicken.svg'
+        name:"Chicken",
+        path:"chicken.svg"
     },
     {
         id:4,
-        name:'Green beans',
-        root:'./src/components/svgs/greenbeans.svg'
+        name:"Green beans",
+        path:"greenbeans.svg"
     },
     {
         id:5,
-        name:'Rabbit',
-        root:'./src/components/svgs/rabbit.svg'
+        name:"Rabbit",
+        path:"rabbit.svg"
     },
     {
         id:6,
-        name:'Saffron',
-        root:'./src/components/svgs/saffron.svg'
+        name:"Saffron",
+        path:"saffron.svg"
     },
     {
         id:7,
-        name:'White beans',
-        root:'./src/components/svgs/whitebeans.svg'
+        name:"White beans",
+        path:"whitebeans.svg"
     }
 ];

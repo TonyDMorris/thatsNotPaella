@@ -12,6 +12,7 @@ import Ingredient from './Ingredient.js'
 
 
 
+
 export class IngredientList extends Component {
   render() {
    
@@ -19,7 +20,7 @@ export class IngredientList extends Component {
 
     const ingredients = IngredientJSON.map(i => {
       
-      return <Ingredient key={i.id} name={i.name} root={i.root}/>
+      return <Ingredient key={i.id} name={i.name} path={i.path}/>
     });
     return (
 

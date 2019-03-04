@@ -1,7 +1,13 @@
 import React, {Component} from 'react'
 import ReactDOM from 'react-dom';
 import { DragSource } from 'react-dnd';
-import Fail from './Fail'
+import Fail from './Fail';
+import { pathToFileURL } from 'url';
+import { createRequireFromPath } from 'module';
+
+
+
+
 
 
 let correctIngredients = ['rabbit']
@@ -66,10 +72,10 @@ function collect(connect, monitor) {
 class Ingredient extends Component {
     render() {
       
-      const { isDragging, connectDragSource, name, id, root } = this.props;
+      const { isDragging, connectDragSource, name, id, path } = this.props;
   
       return connectDragSource(
-        <li key={id} style={style}>{name}<img style={imgStyle} src={require({root})} alt="a pic"></img></li>
+        <li key={id} style={style}>{name}<img style={imgStyle} src={require(`/home/tony/Documents/thatsnotpaella/src/components/svgs/${path}`)} alt={name}></img></li>
 
       );
     }
