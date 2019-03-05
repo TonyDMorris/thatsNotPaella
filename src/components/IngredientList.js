@@ -3,32 +3,49 @@ import IngredientJSON from './IngredientJSON'
 import Ingredient from './Ingredient.js';
 
 
-  
-
-
-
-
+ let placeHolder = IngredientJSON
 
 
 
 
 export class IngredientList extends Component {
-  render() {
-   
-    const deleteItem = (id) => {
-      console.log(id)
-    }
-
-    const ingredients = IngredientJSON.map(i => {
+  constructor(props) {
+    super(props);
+  this.state = {
       
-      return <Ingredient  key={i.id} name={i.name} path={i.path}/>
-    });
+
+    ingredients:placeHolder.map(i => {
+    
+      return <Ingredient id={i.id} handleDrop={(x)=>this.state.deleteItem(x)}   key={i.id} name={i.name} path={i.path}/>
+    }),
+    
+    deleteItem:(x)=>{
+      return this.setState(prevState => {
+        let ingredients = prevState.ingredients
+        
+        ingredients = ingredients.filter(y => y.props.name !== x)
+        
+        return{ingredients}
+      })
+    },
+  }}
+  render() {
+    
+    
+    
+    
+    
+
+    
+    
+
+    
     return (
 
 
   
   <ul style={style}>
-    {ingredients}
+    {this.state.ingredients}
     </ul>
   
        

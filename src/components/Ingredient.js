@@ -36,6 +36,9 @@ return item
 
   endDrag(props, monitor, component) {
     
+console.log(props)
+
+props.handleDrop(props.name)
 
     // When dropped on a compatible target, do something.
     // Read the original dragged item from getItem():
@@ -47,7 +50,7 @@ return item
     const dropResult = monitor.getDropResult();
 
     if (monitor.didDrop()) {
-      console.log(props.handleDrop(props.id))
+      
       
       if(correctIngredients.indexOf(`${monitor.getItem().name}`) > -1){
         
@@ -83,7 +86,7 @@ class Ingredient extends Component {
       const { isDragging, connectDragSource, name, id, path } = this.props;
   
       return connectDragSource(
-        <li handleDrop={(id) => this.deleteItem(id)} key={id} style={style}>{name}<img style={imgStyle} src={require(`/home/tony/Documents/thatsnotpaella/src/components/svgs/${path}`)} alt={name}></img></li>
+        <li  key={id} style={style}>{name}<img style={imgStyle} src={require(`/home/tony/Documents/thatsnotpaella/src/components/svgs/${path}`)} alt={name}></img></li>
 
       );
     }
