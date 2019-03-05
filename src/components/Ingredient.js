@@ -3,15 +3,8 @@ import ReactDOM from 'react-dom';
 import { DragSource } from 'react-dnd';
 import Fail from './Fail';
 
-const deleteItem = (id) => {
-  console.log(id)
-}
 
-
-
-
-
-let correctIngredients = ['rabbit', 'tomato', 'garlic', 'paprika', 'chicken', 'greenbeans', 'rabbit', 'saffron', 'whitebeans']
+let correctIngredients = ['Rabbit', 'Tomato', 'Garlic', 'Paprika', 'Chicken', 'Green beans', 'Saffron', 'White beans']
 const types = {
     food:'food'
 }
@@ -19,52 +12,41 @@ const types = {
 const spec = {
   
 
-  
-
   beginDrag(props, monitor, component) {
-    // Return the data describing the dragged item
+    
     
 const item = {
   name:props.name,
   id:props.id
 }
 return item
+},
+
+
+
+endDrag(props, monitor, component) {
+ 
+  if (monitor.didDrop()) {
     
-    
-    
-  },
-
-  endDrag(props, monitor, component) {
-    
-console.log(props)
-
-props.handleDrop(props.name)
-
-    // When dropped on a compatible target, do something.
-    // Read the original dragged item from getItem():
-    const item = monitor.getItem();
-
-    // You may also read the drop result from the drop target
-    // that handled the drop, if it returned an object from
-    // its drop() method.
-    const dropResult = monitor.getDropResult();
-
-    if (monitor.didDrop()) {
-      
-      
-      if(correctIngredients.indexOf(`${monitor.getItem().name}`) > -1){
-        
-      }
-//        const parent = ReactDOM.render(<Fail show="true"/>, document.querySelector("#modal"));
-// parent.forceUpdate()
+    props.handleDrop(props.name)
 
 
-      
-      
+    if(correctIngredients.indexOf(props.name) == -1){
+      const parent = ReactDOM.render(<Fail show="true"/>, document.querySelector("#modal"));
+
+
+       parent.forceUpdate()
     }
-  
+       
+
   }
+
+}
 };
+    
+    
+    
+
 
 /**
  * Specifies which props to inject into your component.
@@ -84,22 +66,25 @@ class Ingredient extends Component {
     render() {
       
       const { isDragging, connectDragSource, name, id, path } = this.props;
+
+      const style = {
   
+        display:'grid',
+        gridTemplateColumns:'repeat(auto-fill, minmax(50%, 1fr))',
+        border:'solid 1px blue',
+        cursor:'move',
+        opacity:isDragging ? '0' : '1'
+        
+      }
+
       return connectDragSource(
+
         <li  key={id} style={style}>{name}<img style={imgStyle} src={require(`/home/tony/Documents/thatsnotpaella/src/components/svgs/${path}`)} alt={name}></img></li>
 
       );
     }
   }
-const style = {
-  
-  display:'grid',
-  gridTemplateColumns:'repeat(auto-fill, minmax(50%, 1fr))',
-  border:'solid 1px blue',
-  cursor:'move',
-  
-  
-}
+
 const imgStyle = {
   maxWidth:'100%',
   maxHeight:'100%'

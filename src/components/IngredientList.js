@@ -31,22 +31,35 @@ export class IngredientList extends Component {
   }}
   render() {
     
-    
-    
-    
-    
-
-    
-    
-
-    
     return (
+      
+      <ul style={style}>
+        {this.state.ingredients}
+        </ul>
+      )
+    }
+    }
+    const style = {
+    display:'grid',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))',
+    gridTemplateRows: 'repeat(auto-fill, minmax(100px, 1fr))',
+    border:'solid 1px blue',
+    gridRow: '1 / span 1',
+    gridColumn:'2 / span 1'
+    };
+    export default IngredientList;
+    
+    
+    
+    
 
+    
+    
+
+    
+    
 
   
-  <ul style={style}>
-    {this.state.ingredients}
-    </ul>
   
        
 
@@ -56,16 +69,3 @@ export class IngredientList extends Component {
       
      
         
-    )
-  }
-}
-const style = {
-  display:'grid',
-  gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))',
-  gridTemplateRows: 'repeat(auto-fill, minmax(100px, 1fr))',
-  
-  border:'solid 1px blue',
-  gridRow: '1 / span 1',
-  gridColumn:'2 / span 1'
-};
-export default IngredientList;
