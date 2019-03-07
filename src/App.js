@@ -15,9 +15,7 @@ class App extends Component {
         {/* <link
   rel="stylesheet"
   href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/> */}
-  <link
-  rel="stylesheet"
-  href="/home/tony/Documents/thatsnotpaella/src/App.css"/>
+  
          </header>
 
          

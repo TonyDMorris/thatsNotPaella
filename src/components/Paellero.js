@@ -19,23 +19,28 @@ export class Paellero extends Component {
         const {connectDropTarget} = this.props;
 
         return connectDropTarget(
-<div style={style}><img style={imgStyle} src={require('/home/tony/Documents/thatsnotpaella/src/components/svgs/paella-149635_1280.png')} alt='a paella'></img><h1 style={imgStyle}>Add things until you ruin the Paella</h1></div>
+<div style={style}><img style={imgStyle} src={require('/home/tony/Documents/thatsnotpaella/src/components/svgs/paella-149635_1280.png')} alt='a paella'></img><h1 style={textStyle}>Add things until you ruin the Paella</h1></div>
         )
     }
 };
 
 const imgStyle ={
-    maxWidth:'100%',
-    maxHeight:'100%',
-    gridColumn:'2 / span 1',
-
+    maxWidth:'500px',
+    border: 'none',
+    display: 'block',
+    margin: '0 auto',
+    gridRow:'1 / span 1',
+   
+}
+const textStyle = {
+    
+    gridRow:'2 / span 1'
     
 }
-
 const style = {
     display:'grid',
-    gridTemplateColumns:'20% 60% 20%',
-    gridTemplateRows:'50% 50%',
+    textAlign:'center',
+    gridTemplateRows:'auto auto',
     backgroundColor:'#008c72',
     border:'solid 10px #003840',
     borderRadius:'50px',
