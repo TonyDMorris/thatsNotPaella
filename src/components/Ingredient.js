@@ -94,7 +94,8 @@ const textStyle = {
 const imgStyle = {
   maxHeight:'100%',
   width:'100%',
-  gridRow:'1 / span 1'
+  gridRow:'1 / span 1',
+  
  
 }
 

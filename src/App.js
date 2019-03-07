@@ -15,6 +15,9 @@ class App extends Component {
         {/* <link
   rel="stylesheet"
   href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/> */}
+  <link
+  rel="stylesheet"
+  href="/home/tony/Documents/thatsnotpaella/src/App.css"/>
          </header>
 
          
@@ -30,7 +33,7 @@ class App extends Component {
 const style = {
   display:'grid',
   gridTemplateColumns:'10vw 80vw 10vw',
-  gridTemplateRows:'60vh 40vh',
+  gridTemplateRows:'40vh 60vh',
   backgroundColor:'#02a676'
 }
 export default DragDropContext(HTML5Backend)(App)
