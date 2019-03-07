@@ -68,26 +68,34 @@ class Ingredient extends Component {
       const { isDragging, connectDragSource, name, id, path } = this.props;
 
       const style = {
-  
+        backgroundColor:'#005a5b',
+        height:'250px',
         display:'grid',
-        gridTemplateColumns:'repeat(auto-fill, minmax(50%, 1fr))',
-        border:'solid 1px blue',
+        gridTemplateRows:'60% 40%',
+        border:'solid 10px #003840',
+        borderRadius:'50px',
         cursor:'move',
-        opacity:isDragging ? '0' : '1'
+        opacity:isDragging ? '0' : '1',
+        textAlign:'center'
         
       }
 
       return connectDragSource(
 
-        <li  key={id} style={style}>{name}<img style={imgStyle} src={require(`/home/tony/Documents/thatsnotpaella/src/components/svgs/${path}`)} alt={name}></img></li>
+        <div  key={id} style={style}><h2 style={textStyle}>{name}</h2><img style={imgStyle} src={require(`/home/tony/Documents/thatsnotpaella/src/components/svgs/${path}`)} alt={name}></img></div>
 
       );
     }
   }
-
+const textStyle = {
+  padding:'10%'
+  
+}
 const imgStyle = {
-  maxWidth:'100%',
-  maxHeight:'100%'
+  maxHeight:'100%',
+  width:'100%',
+  gridRow:'1 / span 1'
+ 
 }
 
 export default DragSource(types.food, spec, collect)(Ingredient);

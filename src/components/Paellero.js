@@ -29,6 +29,7 @@ const style = {
     height:'100%',
     width:'100%',
     backgroundColor:'blue',
+    gridColumn:'2 / span 1',
     gridRow: '1 / span 1'
 };
 export default DropTarget(types.food, {}, collect)(Paellero)

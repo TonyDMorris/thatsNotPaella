@@ -12,9 +12,9 @@ class App extends Component {
     return (
       <div style={style} className="App">
         <header className="App-header">
-        <link
+        {/* <link
   rel="stylesheet"
-  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/> */}
          </header>
 
          
@@ -29,7 +29,8 @@ class App extends Component {
 }
 const style = {
   display:'grid',
-  gridTemplateColumns:'60vw 40vw',
-  gridTemplateRows:'70vh 30vh'
+  gridTemplateColumns:'10vw 80vw 10vw',
+  gridTemplateRows:'60vh 40vh',
+  backgroundColor:'#02a676'
 }
 export default DragDropContext(HTML5Backend)(App)
