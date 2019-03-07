@@ -91,6 +91,7 @@ const textStyle = {
   padding:'10%'
   
 }
+
 const imgStyle = {
   maxHeight:'100%',
   width:'100%',
