@@ -45,7 +45,7 @@ export class IngredientList extends Component {
     gridTemplateRows: 'repeat(auto-fill, minmax(250px, 1fr))',
     overflow:'hidden',
     overflowY:'scroll',
-    WebkitTransform: 'rotate(90deg)',
+    Webkit: 'rotate(90deg)',
     gridRow: '2 / span 1',
     gridColumn:'2 / span 1'
     };
