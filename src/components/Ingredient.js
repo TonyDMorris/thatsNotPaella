@@ -69,9 +69,10 @@ class Ingredient extends Component {
 
       const style = {
         backgroundColor:'#005a5b',
-        height:'250px',
+        height:'225px',
+        width:'100%',
         display:'grid',
-        gridTemplateRows:'60% 40%',
+        gridTemplateRows:'50% 50%',
         border:'solid 10px #003840',
         borderRadius:'50px',
         cursor:'move',
