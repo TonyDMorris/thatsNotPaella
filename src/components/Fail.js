@@ -30,18 +30,31 @@ class Fail extends Component {
       <>
         
 
-        <Modal show={this.state.show} onHide={this.handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Thats not Paella</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>{this.textProp}</Modal.Body>
-          <Modal.Footer>
-            <Button variant="primary" onClick={this.handleReset}>
+        <Modal
+        {...this.props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        
+          <Modal.Title id="contained-modal-title-vcenter">
+            Modal heading
+          </Modal.Title>
+       
+        <Modal.Body>
+          <h4>Centered Modal</h4>
+          <p>
+            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+            ac consectetur ac, vestibulum at eros.
+          </p>
+        </Modal.Body>
+        <Modal.Footer>
+        <Button variant="primary" onClick={this.handleReset}>
               Start again!
             </Button>
-           
-          </Modal.Footer>
-        </Modal>
+        </Modal.Footer>
+      </Modal>
       </>
     );
   }

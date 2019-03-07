@@ -43,9 +43,11 @@ export class IngredientList extends Component {
     display:'grid',
     gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
     gridTemplateRows: 'repeat(auto-fill, minmax(250px, 1fr))',
+    gridRowGap:'0.5%',
+    gridColumnGap:'0.5%',
     overflow:'hidden',
     overflowY:'scroll',
-    Webkit: 'rotate(90deg)',
+    
     gridRow: '2 / span 1',
     gridColumn:'2 / span 1'
     };

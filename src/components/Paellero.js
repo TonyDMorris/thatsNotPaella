@@ -26,6 +26,7 @@ export class Paellero extends Component {
 
 const imgStyle ={
     maxWidth:'100%',
+    maxHeight:'100%',
     gridColumn:'2 / span 1',
 
     
@@ -34,13 +35,13 @@ const imgStyle ={
 const style = {
     display:'grid',
     gridTemplateColumns:'20% 60% 20%',
-    gridTemplateRows:'80% 20%',
+    gridTemplateRows:'50% 50%',
     backgroundColor:'#008c72',
     border:'solid 10px #003840',
     borderRadius:'50px',
     gridColumn:'2 / span 1',
     gridRow: '1 / span 1',
-    
+    verticalAlign:'text-top'
 };
     
 export default DropTarget(types.food, {}, collect)(Paellero)

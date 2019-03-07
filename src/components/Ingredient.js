@@ -31,7 +31,7 @@ endDrag(props, monitor, component) {
     props.handleDrop(props.name)
 
 
-    if(correctIngredients.indexOf(props.name) === -1){
+    if(correctIngredients.indexOf(props.name) !== -1){
       const parent = ReactDOM.render(<Fail show="true"/>, document.querySelector("#modal"));
 
 
@@ -82,7 +82,7 @@ class Ingredient extends Component {
 
       return connectDragSource(
 
-        <div  key={id} style={style}><h2 style={textStyle}>{name}</h2><img style={imgStyle} src={require(`/home/tony/Documents/thatsnotpaella/src/components/svgs/${path}`)} alt={name}></img></div>
+        <div  key={id} style={style}><h1 style={textStyle}>{name}</h1><img style={imgStyle} src={require(`/home/tony/Documents/thatsnotpaella/src/components/svgs/${path}`)} alt={name}></img></div>
 
       );
     }

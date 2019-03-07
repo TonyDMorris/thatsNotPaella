@@ -34,6 +34,6 @@ const style = {
   display:'grid',
   gridTemplateColumns:'10vw 80vw 10vw',
   gridTemplateRows:'40vh 60vh',
-  backgroundColor:'#02a676'
+  
 }
 export default DragDropContext(HTML5Backend)(App)
