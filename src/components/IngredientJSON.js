@@ -38,6 +38,46 @@ export default [
         id:7,
         name:"White beans",
         path:"whitebeans.svg"
+    },
+    {
+        id:8,
+        name:"Chorizo",
+        path:"001-chorizo.svg"
+    },
+    {
+        id:9,
+        name:"Ham",
+        path:"002-ham.svg"
+    },
+    {
+        id:10,
+        name:"Steak",
+        path:"003-steak.svg"
+    },
+    {
+        id:11,
+        name:"Pineapple",
+        path:"004-pineapple.svg"
+    },
+    {
+        id:12,
+        name:"Cheese",
+        path:"005-cheese.svg"
+    },
+    {
+        id:13,
+        name:"Salami",
+        path:"006-salami.svg"
+    },
+    {
+        id:14,
+        name:"Pepperoni",
+        path:"007-pepperoni.svg"
+    },
+    {
+        id:15,
+        name:"Salmon",
+        path:"008-salmon.svg"
     }
     
 

@@ -32,23 +32,32 @@ export class IngredientList extends Component {
   render() {
     
     return (
-      
+      <>
+      <div style={textStyle} ><h1>ADD INGREDIENTS UNTIL YOU RUIN THE PEALLA</h1></div>
       <ul style={style}>
         {this.state.ingredients}
         </ul>
+        </>
       )
     }
     }
+    const textStyle ={
+      gridRow: '2/ span 1',
+    gridColumn:'2 / span 1',
+    textAlign:'center',
+    lineHeight:'0.5'
+    }
+
     const style = {
     display:'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(225px, 1fr)',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr)',
     gridTemplateRows: 'repeat(auto-fill, 1fr',
     gridRowGap:'0.5%',
     gridColumnGap:'0.5%',
     overflow:'hidden',
     overflowY:'scroll',
     
-    gridRow: '2 / span 1',
+    gridRow: '3/ span 1',
     gridColumn:'2 / span 1'
     };
     export default IngredientList;
