@@ -31,7 +31,7 @@ endDrag(props, monitor, component) {
     props.handleDrop(props.name)
 
 
-    if(correctIngredients.indexOf(props.name) !== -1){
+    if(correctIngredients.indexOf(props.name) === -1){
       const parent = ReactDOM.render(<Fail show="true"/>, document.querySelector("#modal"));
 
 

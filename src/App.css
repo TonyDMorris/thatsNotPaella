@@ -2,32 +2,26 @@
   margin: 0;
 
   box-sizing: border-box;
-  font-family: Helvetica;
+  font-family: 'Indie Flower', cursive;
   font-weight: 700;
   padding: 5px;
 }
 
-#root {
+body {
   background-color: #02a676;
 }
 
-::-webkit-scrollbar {
-  width: 12px;
-}
 
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-}
+
+
 
 ::-webkit-scrollbar-thumb {
-  background-color: #003840;
+  background-color: black;
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
-
+/* taken from bootstrap css min */
 .modal-open {
   overflow: hidden
 }

@@ -33,7 +33,7 @@ export class IngredientList extends Component {
     
     return (
       <>
-      <div style={textStyle} ><h1>ADD INGREDIENTS UNTIL YOU RUIN THE PEALLA</h1></div>
+      <div style={textStyle}><h1>ADD INGREDIENTS UNTIL YOU RUIN THE PEALLA</h1></div>
       <ul style={style}>
         {this.state.ingredients}
         </ul>
@@ -45,7 +45,8 @@ export class IngredientList extends Component {
       gridRow: '2/ span 1',
     gridColumn:'2 / span 1',
     textAlign:'center',
-    lineHeight:'0.5'
+    lineHeight:'0.5',
+    fontFamily:'"Indie Flower", cursive'
     }
 
     const style = {
@@ -56,9 +57,10 @@ export class IngredientList extends Component {
     gridColumnGap:'0.5%',
     overflow:'hidden',
     overflowY:'scroll',
-    
+    border:'solid 10px #003840',
     gridRow: '3/ span 1',
-    gridColumn:'2 / span 1'
+    gridColumn:'2 / span 1',
+    backgroundColor:'#008c72'
     };
     export default IngredientList;
     
