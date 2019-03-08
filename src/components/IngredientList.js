@@ -46,7 +46,7 @@ export class IngredientList extends Component {
     gridColumn:'2 / span 1',
     textAlign:'center',
     lineHeight:'0.5',
-    fontFamily:'"Indie Flower", cursive'
+    
     }
 
     const style = {
