@@ -64,7 +64,7 @@ const textStyle = {
 
 const style = {
   display: "grid",
-  gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr)",
+  gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr)",
   gridTemplateRows: "repeat(auto-fill, 1fr",
   gridRowGap: "0.5%",
   gridColumnGap: "0.5%",

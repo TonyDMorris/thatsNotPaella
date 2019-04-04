@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
-import { Button } from 'react-bootstrap';
-import { Modal } from 'react-bootstrap';
+import React, { Component } from "react";
+import { Button } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 
 class Fail extends Component {
   constructor(props, context) {
@@ -10,7 +10,7 @@ class Fail extends Component {
     this.handleClose = this.handleClose.bind(this);
 
     this.state = {
-      show: true,
+      show: true
     };
   }
 
@@ -22,44 +22,35 @@ class Fail extends Component {
     this.setState({ show: true });
   }
 
-  handleReset = () => window.location.reload()
-  
+  handleReset = () => window.location.reload();
 
   render() {
     return (
       <>
-        
-
         <Modal
-        {...this.props}
-        size="lg"
-        aria-labelledby="contained-modal-title-vcenter"
-        centered
-      >
-        
+          {...this.props}
+          size="lg"
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
+        >
           <Modal.Title id="contained-modal-title-vcenter">
             <h1>What are you doing!</h1>
           </Modal.Title>
-       
-        <Modal.Body>
-          
-          <p>
-            <h1>Thats not paella!! thats just rice with things.</h1>
-          </p>
-        </Modal.Body>
-        <Modal.Footer>
-        <Button variant="primary" onClick={this.handleReset}>
+
+          <Modal.Body>
+            <p>
+              <h1>Thats not paella!! thats just rice with things.</h1>
+            </p>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="primary" onClick={this.handleReset}>
               Start again!
             </Button>
-        </Modal.Footer>
-      </Modal>
+          </Modal.Footer>
+        </Modal>
       </>
     );
   }
 }
 
-
-  
-  
-
-  export default Fail
+export default Fail;
